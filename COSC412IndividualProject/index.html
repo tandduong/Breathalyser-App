@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Breathalyser Web App</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0acc1abd97.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+            ['Age', 'Percentage'],
+            ['Baby Boomers',     14.1],
+            ['40-54 years old',      19.0],
+            ['16-24 years old',  31.0],
+            ['Millenials', 35.8]
+            ]);
+
+            var options = {
+            title: 'Which age group do you think is mostlikely to drink and drive?'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+</script>
+    </head>
+    <body>
+        <!--Header -->
+        <header id="header">
+            <a href="#" class="logo">Logo</a>
+            <ul>
+               <li><a href="#home" onclick="toggle()">Home</a></li>
+               <li><a href="#about" onclick="toggle()">About</a></li>
+               <li><a href="#services" onclick="toggle()">Services</a></li>
+               <li><a href="#bac" onclick="toggle()">Get BAC</a></li>
+               <li><a href="#works" onclick="toggle()">Projects</a></li>
+               <li><a href="#author" onclick="toggle()">Author</a></li>
+               <li><a href="#contacts" onclick="toggle()">Contacts</a></li>
+            </ul>
+            <div class="toggle" onclick="toggle()"></div>
+        </header>
+        <!--Banner -->
+        <section class="banner" id="home">
+            <h2>Stay <span>Safe</span> On The Road</h2>
+        </section>
+        <!--About -->
+        <section class="section" id="about">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>What is Breathalyser App?</h3>
+                    <p>Breathalyzer App is the Web-based Project developed to provide the tool of measuring the BAC value for everyone. It is also collect users' data for the purpose of further researching.</p>    
+                    <p>BAC stands for the Blood Alcohol Concentration, refers to the percent of alcohol (ethyl alcohol or ethanol) in a person's blood stream.</p>
+                    <a href="https://alcohol.stanford.edu/alcohol-drug-info/buzz-buzz/what-bac" target="_blank" class="btn">Read More about BAC</a>
+                </div>
+            </div>
+        </section>
+        <!--Services -->
+        <section class="section" id="services">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>Why use Breathlyser App?</h3>
+                    <p>Using this app to keep track on our BAC, to reduce rate of traffic accidents caused by drunk driving, and save your money.</p>    
+                </div>
+
+                <div class="sub-services">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-wine-bottle fa-2x"></i>
+                        </div>
+                        <div class="content">
+                            <h2>Get your BAC Result</h2>
+                            <p>The higher the BAC value, the better for you to NOT drive. The app will used your data such as your age, weight, type and amount of drink that consumed to calculate the final result. The advice will let user know if they should join the road.</p>   
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-car fa-2x"></i>
+                        </div>
+                        <div class="content">
+                            <h2>Reduce Drunk Driving</h2>
+                            <p>Follow the advice to keep yourself from unwanted consequences and decrease the rate of drunk driving. Stay up late at the bar or party, or risk your own life on the road, that's your choice!</p>   
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-piggy-bank fa-2x"></i>
+                        </div>
+                        <div class="content">
+                            <h2>Save Money!</h2>
+                            <p>No one wants to spend any money on silly things. Choose this app as your partner in any party because it's free, safe and helpful. You can avoid paying for your emergency service, if you make wise decision.</p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Stats -->
+        <section class="section stats">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>Statistics (2018)</h3>
+                    <p>Still do not believe in the dangerous of drunk driving? Statistics below will burst your bubble...</p>
+                    <p>(Data collected since 2016, within the United States)</p>    
+                </div>
+                <div class="statsBox">
+                    <div class="box">
+                        <h2>10000+ Deaths</h2>
+                        <a class="btn-1" href="https://www.forbes.com/sites/niallmccarthy/2016/08/11/the-worst-countries-in-the-world-for-drunk-driving-infographic/#43f62a332f5c"><h4>Forbes</h4></a>
+                    </div>
+                    
+                    <div class="box">
+                        <h2>28% Traffic Accidents</h2>
+                        <a class="btn-1" href="https://www.thezebra.com/drunk-driving-statistics/"><h4>Zebra Survey</h4></a>
+                    </div>
+                    
+                    <div class="box">
+                        <h2>>1M arrested cases</h2>
+                        <a class="btn-1" href="https://www.cdc.gov/motorvehiclesafety/impaired_driving/impaired-drv_factsheet.html"><h4>Related to Drunk Driving (CDC)</h4></a>
+                    </div>
+
+                    <div class="box">
+                        <h2>>200 children killed</h2>
+                        <a class="btn-1" href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812864"><h4>NHTSA</h4></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Graphs-->
+        <div class="graphs">
+            <div id="piechart"></div>
+            <div class="stat-note">
+              <h3>From Zebra, 2020</h3>
+                <p>Over a quarter (26.1%) of respondents said it takes 3-4 alcoholic drinks for them to feel unfit to drive, while 6.1% said it takes more than five.</p>
+                <p>The majority (30.8%) of people believe that after a DUI, a driver should lose their license but only temporarily. Interestingly, 28.1% of the total group believed it should take two DUIs to lose your license permanently.</p> 
+                <p>In data comparable to last year's survey, 40.3% of people call a friend or a significant other to pick them up. 25.7% use rideshare, and a full 10% actually just walk home. These three options were also the most popular in last year's survey.</p>
+                <p> 3.5% of respondents ages 25-34 prefer to use a motorized scooter service (i.e. Bird, Lime) to drive home after a night of drinking over rideshare.</p>
+                <p>Most people are aware of their limits regarding alcohol: 30.5% don't believe they have a high tolerance and won't drive after drinking.</p>
+                <p>18.9% of respondents admit to driving while buzzed. 2.1% admitted to driving while high, and 5.6% admitted to driving while buzzed and high. Remember buzzed driving is drunk driving and you can still face legal repercussions if pulled over while buzzed!</p>
+        
+            </div>
+          </div>
+        <!--Measures -->
+        <div class="container" id="bac">
+              <h3>Get Your BAC</h3>
+              <form id="form-card">
+                <div class="row">
+                  <label>Sex: </label>
+                  <select form="form-card" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select><br>
+                </div>
+                <div class="row">
+                  <label>Age: </label><input type="number" id="age" placeholder="Your Age"><br>
+                </div>
+                <div class="row">
+                  <label>Weight: </label><input type="number" id="weight" placeholder="kg"><br>
+                </div>
+                <div class="row">
+                  <label>Height: </label><input type="number" id="height" placeholder="cm"><br>
+                </div>
+                <div class="row">
+                  <label>Beverages: </label>
+                  <select form="form-card" id="brand">
+                    <option value="beer">Beer</option>
+                    <option value="wine">Alcohol</option>
+                  </select><br>
+                </div>
+                <div class="row" id="beer">
+                  <label>Beer:</label>
+                  <select id="category-beer">
+                    <option value="330-5.3">333</option>
+                    <option value="250-5">Heineken 250ml</option>
+                    <option value="330-5">Heineken 330ml</option>
+                    <option value="500-7">Heineken 500ml</option>
+                    <option value="330-5">Tiger 330ml</option>
+                    <option value="500-5">Tiger 500ml</option>
+                    <option value="330-5">Carlberg 330ml</option>
+                    <option value="500-5">Carlberg 500ml</option>
+                    <option value="330-4.6">Hanoi 330ml (4.6%)</option>
+                    <option value="330-5.1">Hanoi 330ml (5.1%)</option>
+                    <option value="450-4.2">Hanoi 450ml</option>
+                    <option value="330-4.7">Huda 330ml</option>
+                    <option value="350-4.7">Huda 350ml</option>
+                    <option value="500-5">Huda 500ml</option>
+                    <option value="330-4">Larue 330ml</option>
+                    <option value="355-4">Larue 355ml</option>
+                    <option value="355-4.9">Saigon Export</option>
+                    <option value="450-4.3">Saigon Lager</option>
+                    <option value="330-4.9">Saigon Special</option>
+                    <option value="330-5">Sam Miguel 330ml</option>
+                    <option value="500-5">Sam Miguel 500ml</option>
+                    <option value="330-5">Sapporo 330ml</option>
+                    <option value="650-5.2">Sapporo 650ml</option>
+                  </select>
+                </div>
+                <div class="row" id="beer-cup">
+                  <label>Amount: </label>
+                  <select id="beer-cup-number">
+                    <script type="text/javascript">
+                      for (var i = 1; i <= 30; i++) {
+                        document.write("<option value='" + i + "'>" + i + " can</option>");
+                      }
+                    </script>
+                  </select>
+                </div>
+                <div class="row" id="wine">
+                  <label>Alcohol:</label>
+                  <select class="form-control" id="category-wine">
+                    <option value="40">Rice Wine</option>
+                    <option value="40">Sticky Rice Winw</option>
+                    <option value="40">Camus</option>
+                    <option value="40">Hines</option>
+                    <option value="40">Vodka</option>
+                    <option value="12">Bordeaux</option>
+                    <option value="12">Bourgogne</option>
+                    <option value="12">Champagne</option>
+                    <option value="12">Côte du Rhône</option>
+                    <option value="15">Chardonnay</option>
+                    <option value="15">Cabernet Sauvignon</option>
+                    <option value="15">Merlot</option>
+                    <option value="40">Hennessy</option>
+                    <option value="40">Remy Martin</option>
+                    <option value="40">Martel, Otard</option>
+                    <option value="40">Courvoisier</option>
+                  </select>
+                </div>
+                <div class="row" id="wine-cup">
+                  <label>Glasss:</label>
+                  <select id="cup">
+                    <option value="50">50ml</option>
+                    <option value="100">100ml</option>
+                    <option value="200">200ml</option>
+                    <option value="300">300ml</option>
+                    <option value="400">400ml</option>
+                    <option value="500">500ml</option>
+                  </select>
+                </div>
+                <div class="row" id="wine-cup-number">
+                  <label>Amount:</label>
+                  <select id="cup-number">
+                    <script type="text/javascript">
+                      for (var i = 1; i <= 50; i++) {
+                        document.write("<option value='" + i + "'>" + i + " glasses</option>");
+                      }
+                    </script>
+                  </select>
+                </div>
+                <div class="row">
+                  <label>Time after drink: </label><input type="number" id="time" placeholder="mins"><br>
+                </div>
+                <div class="button-area">
+                  <button class="btn result" type="button" id="add">Get your Result</button>
+                  <button class="btn reset" type="button" id="reset">Reset</button>
+                </div>
+              </form>
+            </section>
+            <section class="info">
+            </section>
+            <section class="note">
+              <div class="post">
+                <p>The estimation of the BAC is not entirely accurate because there are other factors affecting the results such as genetic factors, health status, daily habits or urinating. Therefore, to ensure 100% safety when participating in traffic it is best to NOT to drink or drink too much.</p>
+              </div>
+            </section>
+          </div>
+          <script src="js/bac.js"></script>
+        <!--Portfolio -->
+        <section class="section work" id="works">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>Related Articles</h3>
+                    <p>In case you need more information...</p>    
+                </div>
+                <div class="workBox">
+                    <div class="brand">
+                        <a href="https://www.ajpmonline.org/article/S0749-3797(20)30040-4/pdf" target="_blank"><h2>Alcohol Policies and Motor Vehicle Crash Deaths Involving Blood Alcohol Concentrations Below 0.08%</h2></a>
+                    </div>
+
+                    <div class="brand">
+                        <a href="https://nypost.com/tag/drunk-driving/" target="_blank"><h2>NY Post Series about Drunk Driving</h2></a>
+                    </div>
+
+                    <div class="brand">
+                        <a href="https://www.nytimes.com/2020/01/01/nyregion/ny-legislator-drunk-driving.html" target="_blank"><h2>Don’t Drink and Drive, Republican Leader Said. Then He Was Arrested.</h2></a>
+                    </div>
+
+                    <div class="brand">
+                        <a href="https://www.usnews.com/news/health-news/articles/2020-03-16/many-car-crash-deaths-involve-alcohol-levels-below-legal-limit-study" target="_blank"><h2>Many Car Crash Deaths Involve Alcohol Levels Below Legal Limit: Study</h2></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Author -->
+        <section class="section" id="author">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>Developer</h3>
+                    <p>Tan D. Duong is a Front-End Developer, came from Vietnam, and have been studying Computer Science in Towson University since 2017. </p>    
+                    <a href="https://tandduong.github.io/new-portfolio-tan/" target="_blank" class="btn">See Tan's Portfolio</a>
+                </div>
+
+                <div class="dev">
+                    <div class="author">
+                        <div class="imgDev">
+                          <img src ="img/avatar.png">  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Contact -->
+        <section class="section contacts" id="contacts">
+            <div class="content">
+                <div class="sub-content">
+                    <h3>Contact Me</h3>
+                    <p>Get in touch with me if you have any opinions, feedback, and things to share. Your message will be collected with the guarantee of privacy. I will try to respond as soon as possible.</p>       
+                </div>
+
+                <div class="form">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="input">
+                                <input id="name" type="text" name="" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="input">
+                                <input id="email" type="text" name="" placeholder="Your Email Address"required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-2">
+                                <textarea id="message" placeholder="Message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="status">
+
+                        </div>
+
+                        <div class="row">
+                            <div class="input-2">
+                                <input id="submit" class="submit" type="submit" name="" value="Send">
+                                <span id="text"></span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer">copyright 2020</div>
+            </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })   
+            function toggle(){
+                var header = document.querySelector("header");
+                header.classList.toggle("active");
+            }         
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+        <script src="js/main.js"></script>
+        
+        <script type="text/javascript">
+            const myForm = document.getElementById('contactForm');
+            const text = document.getElementById('text');
+            myForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                myForm.reset();
+                text.innerHTML = ("Your message has been sent to the developer!!")
+            });
+        </script>
+    </body>
+</html>
