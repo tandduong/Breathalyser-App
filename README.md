@@ -1,4 +1,5 @@
 # Breathalyser-App
+Web-based App to test the BAC. 
 Web App for the Breathayser App using HTML5, CSS3, JavaScript, and the database connected with Firebse
 
-Link will be updated soon
+Link: file:///Users/chiduong/Desktop/COSC412IndividualProject/index.html
