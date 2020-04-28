@@ -38,13 +38,13 @@
     <body>
         <!--Header -->
         <header id="header">
-            <a href="#" class="logo">Logo</a>
+            <a href="#" class="logo">TESTBAC</a>
             <ul>
                <li><a href="#home" onclick="toggle()">Home</a></li>
                <li><a href="#about" onclick="toggle()">About</a></li>
                <li><a href="#services" onclick="toggle()">Services</a></li>
                <li><a href="#bac" onclick="toggle()">Get BAC</a></li>
-               <li><a href="#works" onclick="toggle()">Projects</a></li>
+               <li><a href="#works" onclick="toggle()">Articles</a></li>
                <li><a href="#author" onclick="toggle()">Author</a></li>
                <li><a href="#contacts" onclick="toggle()">Contacts</a></li>
             </ul>
@@ -267,7 +267,7 @@
                   <button class="btn reset" type="button" id="reset">Reset</button>
                 </div>
               </form>
-            </section>
+        
             <section class="info">
             </section>
             <section class="note">
@@ -315,7 +315,7 @@
                 <div class="dev">
                     <div class="author">
                         <div class="imgDev">
-                          <img src ="img/avatar.png">  
+                          <img alt="avatar" src ="img/avatar.png">  
                         </div>
                     </div>
                 </div>
@@ -333,11 +333,11 @@
                     <form id="contactForm">
                         <div class="row">
                             <div class="input">
-                                <input id="name" type="text" name="" placeholder="Your Name" required>
+                                <input id="name" type="text" name="name" placeholder="Your Name" required>
                             </div>
 
                             <div class="input">
-                                <input id="email" type="text" name="" placeholder="Your Email Address"required>
+                                <input id="email" type="text" name="email" placeholder="Your Email Address" required>
                             </div>
                         </div>
 
@@ -353,7 +353,7 @@
 
                         <div class="row">
                             <div class="input-2">
-                                <input id="submit" class="submit" type="submit" name="" value="Send">
+                                <input id="submit" class="submit" type="submit" name="submit" value="Send">
                                 <span id="text"></span>
                             </div>
                         </div>
@@ -370,6 +370,7 @@
                 </div>
                 <div class="footer">copyright 2020</div>
             </div>
+        </section>    
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
                 var header = document.querySelector("header");

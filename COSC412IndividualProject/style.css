@@ -607,6 +607,13 @@ p{
         width: 100%;
         font-size: 16px;
     }
+
+    .sub-services, .statsBox, .button-area, .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media(max-width: 400px){
@@ -621,7 +628,7 @@ p{
 
     .post p{
         width: 100%;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .container label{
